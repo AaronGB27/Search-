@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.scss">
     <link rel="shortcut icon" href="icons8-google-96.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Google</title>
+    <title>Google images</title>
     <style>
         html {
             height: 100%;
@@ -52,6 +51,7 @@
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
+            
         }
         main {
             
@@ -133,7 +133,16 @@
         .g2  { color: #4285F4; } 
         .l   { color:#34A853}
         .e   { color: #EA4335;}
-        
+        #images-text{
+            margin:0;
+            display: flex;
+            color: #4285F4;
+            position: relative;
+            top:-35px;
+            left:115px;
+            font-size:20px;
+            line-height:0;
+        }
         .button-row {
             display: flex;
             flex-direction: row;
@@ -142,8 +151,8 @@
             gap: 12px;
             width: 100%;
         }
-        .button-row input[type="submit"],
-        .button-row button {
+        .button-row input[type="submit"]
+        {
             flex: 0 0 auto;
             margin-top:20px;
             padding:8px 15px;
@@ -151,9 +160,7 @@
             border:none;
         }
         
-        .button-row button:hover{
-            box-shadow:0.5px 0.5px 2px 2px rgba(30, 33, 37, 0.15);
-        }
+        
         .button-row input[type="submit"]:hover{
             box-shadow: 0.5px 0.5px 2px 2px rgba(30, 33, 37, 0.15);
         }
@@ -161,10 +168,10 @@
     </style>
 </head>
 <body>
-    <header>
+        <header>
             
             <ul>
-                <li><a href="google-image.html">Image</a></li>
+                <li><a href="index.html">Google Search</a></li>
                 <li><a href="google-advancedsear.html">Advanced Search</a></li>
             </ul>
         </header>
@@ -173,11 +180,12 @@
             <h1>
                 <span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
             </h1>
-                <form action="https://www.google.com/search">
+            <p id="images-text">Images</p>
+                <form action="https://www.google.com/search" method="get">
+                    <input type="hidden" name="tbm" value="isch">
                     <input type="text" name="q">
                     <div class="button-row">
                         <input type="submit" value="Google Search">
-                        <button type="submit" name="btnI" >I'm Feeling Lucky</button>
                     </div>
                 </form>
             </div>

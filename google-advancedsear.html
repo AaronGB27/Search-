@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons8-google-96.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Google Advanced Search</title>
+    <style>
+        html{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family:"Roboto", sans-serif;
+
+        }
+        header{
+            padding:17px 13px;
+        }
+        .top-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #4285F4;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .top-link:hover {
+            color: #EA4335;
+        }
+        h1{
+            margin-left:38px;
+            color: #EA4335;
+            font-weight: 400;
+            font-size:22px;
+            margin-top:30px;
+        }
+        h2{
+            font-weight:400;
+            font-size:20px;
+        }
+        hr{
+            background-color:rgb(103, 103, 103);
+            border:0.5px solid rgb(223, 223, 223);
+            margin:0;
+        }
+        main{
+            padding-left:51px;
+            padding-top:17px;
+        }
+        form {
+            
+            width: 100em;
+            max-width: 700px;
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            row-gap: 16px;
+            column-gap: 1px;
+            background: #fff;
+        }
+
+        form label {
+            align-self: center;
+            justify-self: start;
+            font-size: 15px;
+        }
+
+        form input[type="text"] {
+            height: 40px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            outline:none;
+            padding: 0 10px;
+            font-size: 15px;
+            
+        }
+        form input[type="text"]:hover{
+            outline:0.5px solid #4285F4;
+        }
+        form .form-actions {
+            grid-column: 2 / 3;         
+            justify-self: end;          
+        }
+
+        form .form-actions button {
+            padding: 8px 20px;
+            font-size: 15px;
+            background: #4285F4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Roboto", sans-serif;
+            transition: background 0.2s;
+        }
+        form .form-actions button:hover {
+            background: #3367d6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div><a href="index.html"><img src="logo-mini.png" alt="logo-google" width="88px" height="40px"></a></div>
+        <h1>Advanced Search</h1>
+    </header>
+    <hr>
+    <main>
+        <h2>Find pages with...</h2>
+        <form action="https://www.google.com/search" method="get">
+            <label for="all">all these words:</label>
+            <input id="all" name="as_q" type="text" tabindex="1">
+            <label for="exact">this exact word or phrase:</label>
+            <input id="exact" name="as_epq" type="text" tabindex="2">
+            <label for="any">any of these words:</label>
+            <input id="any" name="as_oq" type="text" tabindex="3">
+            <label for="none">none of these words:</label>
+            <input id="none" name="as_eq" type="text" tabindex="4">
+            <div class="form-actions">
+                <button type="submit" tabindex="5">Advanced Search</button>
+            </div>
+</form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
